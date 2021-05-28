@@ -1,0 +1,307 @@
+/* Переменные */
+:root {
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --title-color: #212121;
+  --text-color: #757575;
+  --hero-color: #2f303a;
+  --black-color: #000000;
+  --hover-button-color: #188ce8;
+  --portfolio-button-color: #f5f4fa;
+  --logo-font: 'Raleway', 'Arial', 'Helvetica', sans-serif;
+  --main-font: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Глобальные стили */
+body {
+  background-color: var(--white-color);
+  color: var(--title-color);
+  font-family: var(--main-font);
+  font-style: normal;
+}
+
+/* Применится ко всем ссылкам на странице */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Убрали маркеры у списка */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Хедер */
+.page-header .container {
+  background-color: var(--white-color);
+  width: 1200px;
+  flex-direction: row;
+}
+
+/* .nav-header {
+  display: flex;
+} */
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  outline: 2px solid green;
+}
+
+section {
+  padding-top: 94px;
+}
+
+.nav-list {
+  font-family: var(--main-font);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+  outline: 2px solid tomato;
+}
+
+.contact-nav {
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  outline: 2px solid tomato;
+}
+
+/* Навигация */
+.link-nav:hover,
+.link-nav:focus,
+.link-nav:active {
+  color: var(--accent-color);
+}
+
+.link-nav.current {
+  color: var(--accent-color);
+}
+
+.address-list {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+}
+
+.contact-footer {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Стили для футера */
+.link-nav-footer:hover,
+.link-nav-footer:focus,
+.link-nav-footer:active {
+  color: var(--accent-color);
+}
+
+.hero {
+  background-color: var(--hero-color);
+  outline: 2px solid tomato;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.title-hero {
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-family: var(--main-font);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.364;
+  color: var(--white-color);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Кнопка на секции герой*/
+
+.button {
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  top: 430px;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white-color);
+  border: none;
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  color: var(--white-color);
+  background-color: var(--hover-button-color);
+}
+
+/* Кнопки на странице Портфолио */
+.button-portfolio {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  color: var(--title-color);
+  width: 128px;
+  height: 38px;
+  left: 576px;
+  top: 174px;
+  background: var(--portfolio-button-color);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-portfolio:hover,
+.button-portfolio:focus,
+.button-portfolio:active {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+/* Секция наши преимущества (заголовки и текст) в Index */
+
+.invisible {
+  display: none;
+}
+
+.title-section {
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+
+.title-list {
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+.text-list {
+  font-family: var(--main-font);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.title-our-team {
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  /* text-align: center; */
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+.text-our-team {
+  font-family: var(--main-font);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.18;
+  /* text-align: center; */
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+/* Секция наши проекты (заголовки и текст) в Portfolio pages */
+
+.title-portfolio {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+}
+
+.text-portfolio {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+/* Логотип */
+
+.logo {
+  font-family: var(--logo-font);
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--black-color);
+}
+
+.logostudio {
+  font-family: var(--logo-font);
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+/* Логотип в футере */
+
+.logo-footer {
+  font-family: var(--logo-font);
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+}
+
+.footer {
+  background-color: var(--hero-color);
+}
