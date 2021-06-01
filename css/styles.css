@@ -8,6 +8,7 @@
   --black-color: #000000;
   --hover-button-color: #188ce8;
   --portfolio-button-color: #f5f4fa;
+  --card-border-color: #eeeeee;
   --logo-font: 'Raleway', 'Arial', 'Helvetica', sans-serif;
   --main-font: 'Roboto', 'Arial', 'Helvetica', sans-serif;
 }
@@ -170,8 +171,7 @@ p {
   margin-bottom: 50px;
   justify-content: center;
 }
-.btn-item {
-  display: flex;
+.btn-item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -205,31 +205,25 @@ p {
 
 /* Кнопки на странице Портфолио */
 .button-item {
-  font-family: var(--main-font);
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: var(--title-color);
-  width: 128px;
-  height: 38px;
-  left: 576px;
-  top: 174px;
   background: var(--portfolio-button-color);
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  padding: 6px 22px;
 }
 
-.button-portfolio:hover,
-.button-portfolio:focus,
-.button-portfolio:active {
+.button-item:hover,
+.button-item:focus,
+.button-item:active {
   background-color: var(--accent-color);
   color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Секция наши преимущества (заголовки и текст) в Index */
@@ -316,6 +310,7 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 .card-team {
@@ -327,7 +322,6 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  /* text-align: center; */
   letter-spacing: 0.03em;
   color: var(--title-color);
   margin-bottom: 10px;
@@ -344,6 +338,38 @@ img {
 
 /* Секция наши проекты (заголовки и текст) в Portfolio pages */
 
+.section.portfolio {
+  padding-bottom: 0;
+}
+
+.section.portfolio-card {
+  padding-top: 0;
+}
+
+.card-box {
+  display: flex;
+}
+
+.card-set {
+  display: flex;
+  flex-flow: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.card-set > .card-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.content-card-item {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--card-border-color);
+  border-right: 1px solid var(--card-border-color);
+  border-left: 1px solid var(--card-border-color);
+}
+
 .title-portfolio {
   font-family: var(--main-font);
   font-style: normal;
@@ -352,6 +378,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
+  margin-bottom: 4px;
 }
 
 .text-portfolio {
