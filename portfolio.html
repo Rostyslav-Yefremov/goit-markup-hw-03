@@ -16,50 +16,57 @@
 </head>
 
 <body>
-    <!-- Шапка и навигация -->
-    <header class="page-header">
-        <div class="container">
-            <nav>
+    <!-- Шапка и навигация-->
+    <header class="header">
+        <div class="header-container container">
+            <nav class="nav-header">
                 <a href="./index.html" class="logo"> <span
                         class="logostudio">Web</span>Studio</a>
                 <ul class="nav-list list">
-                    <li> <a href="./index.html" class="link-nav">Студия</a></li>
-                    <li> <a href="./portfolio.html"
-                            class="link-nav current">Портфолио</a>
+                    <li class="nav-list-item"> <a href="./index.html"
+                            class="link-nav">Студия</a>
                     </li>
-                    <li> <a href="#" class="link-nav">Контакты</a></li>
+                    <li class="nav-list-item"> <a href="./portfolio.html"
+                            class="link-nav current">Портфолио</a></li>
+                    <li class="nav-list-item"> <a href="#"
+                            class="link-nav">Контакты</a></li>
                 </ul>
             </nav>
             <ul class="contact-nav list">
-                <li> <a href="mailto:info@devstudio.com" class="link-nav">
+                <li class="contact-list-item"> <a
+                        href="mailto:info@devstudio.com" class="link-nav">
                         info@devstudio.com</a></li>
-                <li> <a href="tel:+380961111111" class="link-nav"> +38 096 111
+                <li class="contact-list-item"> <a href="tel:+380961111111"
+                        class="link-nav"> +38 096 111
                         11 11 </a></li>
             </ul>
         </div>
     </header>
-
     <!-- Уникальный контент -->
     <main>
-        <section>
-            <div class="container">
-                <div>
-                    <h2 class="invisible">Наши проекты</h2>
-                    <ul class="list">
-                        <li> <button type="button" class="button-portfolio"> Все
-                            </button>
-                        </li>
-                        <li> <button type="button" class="button-portfolio">
-                                Веб-сайты </button> </li>
-                        <li> <button type="button" class="button-portfolio">
-                                Приложения </button> </li>
-                        <li> <button type="button" class="button-portfolio">
-                                Дизайн </button> </li>
-                        <li> <button type="button" class="button-portfolio">
-                                Маркетинг </button> </li>
-                    </ul>
-                </div>
+        <section class="section portfolio">
+            <div class="container portfolio">
+                <h2 class="invisible">Наши проекты</h2>
+                <ul class="list button-portfolio">
+                    <li class="btn-item"> <button type="button"
+                            class="button-item"> Все
+                        </button>
+                    </li>
+                    <li class="btn-item"> <button type="button"
+                            class="button-item">
+                            Веб-сайты </button> </li>
+                    <li class="btn-item"> <button type="button"
+                            class="button-item">
+                            Приложения </button> </li>
+                    <li class="btn-item"> <button type="button"
+                            class="button-item">
+                            Дизайн </button> </li>
+                    <li class="btn-item"> <button type="button"
+                            class="button-item">
+                            Маркетинг </button> </li>
+                </ul>
             </div>
+
         </section>
 
         <!--Проекты-->

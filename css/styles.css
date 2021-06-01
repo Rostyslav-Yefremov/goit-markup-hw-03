@@ -24,6 +24,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
 /* Убрали маркеры у списка */
@@ -33,44 +34,56 @@ a {
   margin: 0;
 }
 
+h1,
 h2,
 h3,
 h4,
+ul,
 p {
   margin: 0;
 }
 
-/* Хедер */
-.page-header .container {
-  background-color: var(--white-color);
-  width: 1200px;
-  flex-direction: row;
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
-
-/* .nav-header {
-  display: flex;
-} */
 
 .container {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
 }
 
-section {
-  padding-top: 94px;
+/* Хедер */
+
+.header {
+  background-color: var(--white-color);
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container,
+.nav-header {
+  display: flex;
+  align-items: center;
 }
 
 .nav-list {
   font-family: var(--main-font);
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-color);
-  outline: 2px solid tomato;
+
+  margin-left: 93px;
+  display: flex;
+}
+
+.nav-list-item:not(:last-child),
+.contact-list-item:not(:last-child) {
+  display: flex;
+  margin-right: 50px;
 }
 
 .contact-nav {
@@ -80,7 +93,9 @@ section {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
-  outline: 2px solid tomato;
+
+  display: flex;
+  margin-left: auto;
 }
 
 /* Навигация */
@@ -94,12 +109,19 @@ section {
   color: var(--accent-color);
 }
 
+.link-nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .address-list {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--white-color);
+  margin-bottom: 9px;
+  margin-top: 20px;
 }
 
 .contact-footer {
@@ -116,9 +138,13 @@ section {
   color: var(--accent-color);
 }
 
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .hero {
   background-color: var(--hero-color);
-  outline: 2px solid tomato;
+
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -139,6 +165,17 @@ section {
 
 /* Кнопка на секции герой*/
 
+.button-portfolio {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+.btn-item {
+  display: flex;
+  margin-right: 8px;
+}
+
+/* кнопка на главной странице */
 .button {
   width: 200px;
   height: 50px;
@@ -167,7 +204,7 @@ section {
 }
 
 /* Кнопки на странице Портфолио */
-.button-portfolio {
+.button-item {
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 500;
@@ -201,6 +238,16 @@ section {
   display: none;
 }
 
+.features-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.features-item {
+  flex-basis: calc((100% - 60px) / 4);
+  margin-left: 30px;
+}
+
 .title-section {
   font-family: var(--main-font);
   font-weight: bold;
@@ -209,6 +256,7 @@ section {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
+  margin-bottom: 50px;
 }
 
 .title-list {
@@ -219,6 +267,7 @@ section {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
+  margin-bottom: 10px;
 }
 
 .text-list {
@@ -230,6 +279,49 @@ section {
   color: var(--text-color);
 }
 
+/* Чем мы занимаемся */
+
+.section.our-work {
+  padding-top: 0;
+}
+
+.our-work-box {
+}
+
+.our-work-list {
+  display: flex;
+  justify-content: space-between;
+  /* flex-basis: calc(100% / 3); */
+}
+
+/* Наша команда */
+
+.section.our-team {
+  background-color: var(--portfolio-button-color);
+}
+
+.our-team-list {
+  display: flex;
+  text-align: center;
+  margin-left: -30px;
+}
+
+.our-team-list > .team-item {
+  margin-left: 30px;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-color);
+}
+
+img {
+  display: block;
+}
+
+.card-team {
+  padding: 30px;
+}
+
 .title-our-team {
   font-family: var(--main-font);
   font-weight: 500;
@@ -238,6 +330,7 @@ section {
   /* text-align: center; */
   letter-spacing: 0.03em;
   color: var(--title-color);
+  margin-bottom: 10px;
 }
 .text-our-team {
   font-family: var(--main-font);
@@ -280,6 +373,8 @@ section {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--black-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .logostudio {
@@ -300,8 +395,11 @@ section {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--white-color);
+  margin-bottom: 20px;
 }
 
 .footer {
   background-color: var(--hero-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
