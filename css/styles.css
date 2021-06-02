@@ -238,8 +238,36 @@ p {
 }
 
 .features-item {
-  flex-basis: calc((100% - 60px) / 4);
+  flex-basis: calc((100% - 120px) / 4);
   margin-left: 30px;
+}
+
+/* Псевдо элементы - иконки */
+
+.features-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--portfolio-button-color);
+}
+
+.icon-antenna::before {
+  background-image: url(../images/index/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/index/clock.svg);
+}
+
+.icon-notebook::before {
+  background-image: url(../images/index/notebook.svg);
+}
+
+.icon-astro::before {
+  background-image: url(../images/index/astronaut.svg);
 }
 
 .title-section {
@@ -429,4 +457,23 @@ img {
   background-color: var(--hero-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+/* Overlay на секции Hero */
+
+.hero.overlay {
+  height: 600px;
+  max-width: 1600px;
+  outline: 1px solid tomato;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/index/Img-overlay.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
